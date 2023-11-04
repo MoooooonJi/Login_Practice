@@ -10,10 +10,11 @@ loginBtn.addEventListener("click", function(event) {
             if(idInput.value === user.id && pwInput.value === user.pwd){
                 console.log("환영합니다",`${user.name}님!`)
             }else{
-                event.preventDefault(); 
+                
             }
         }
     }).catch(error => {
         console.error('버그', error);
     });
-});
+    event.preventDefault(); 
+})
